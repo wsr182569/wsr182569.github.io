@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*header*/
+header{
+    -webkit-box-shadow: 1px -1px 19px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 1px -1px 19px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 1px -1px 19px 0px rgba(0, 0, 0, 0.22);
+    text-align: center; /*centrowanie*/
+}
+.logo{
+    padding: 32px;
+    margin-block-start: 0px;
+}
+/*card*/
+.card{
+    border-radius: .5rem;
+    -webkit-box-shadow: 1px -1px 19px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 1px -1px 19px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 1px -1px 19px 0px rgba(0, 0, 0, 0.22);
+}
+.card img{
+    border-radius: .5rem .5rem 0 0;
+}
+img{
+    max-width: 100%;
+}
+.card-text{
+    padding-left: 20px;
+}
+.card-title{
+    margin-block-end: 0px;
+}
+.card-paragraph{
+    margin-block-start: 5px;
+    padding-bottom: 25px;
+}
+main{
+    display: grid;
+    gap: 2rem;
+}
+.hero{
+    padding: 2rem;
+}
+.hero-line{
+    height: 4px;
+    width: 10%;
+    background-color: grey;
+}
+.hero-right{
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    height: 75vh;
+    border-radius: .5rem;
+}
+
+section{
+    padding: 1rem;
+}
+.contact h3{
+    font-size: 2rem;
+}
+.contact-item{
+    padding: .5rem 0;
+}
+.contact-item a{
+    text-decoration: none;
+    color: blue;
+}
+
+@media only screen and (min-width: 768px) {
+    .contact{
+        text-align: center;
+        padding: 4rem;
+    }
+    .contact .hero-line{
+        margin: 0 auto;
+    }
+    main{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 0px 20px;
+    }
+    .card{
+    scale: 1;
+    transition: .3s;
+    }
+.card:hover{
+    scale: 1.02;
+    }
+    .hero{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+        background: rgb(255,255,255);
+        background: linear-gradient(156deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 51%, rgba(125,125,125,1) 51%, rgba(125,125,125,1) 100%);
+    }
+    .hero h1{
+        font-size: 3rem;
+    }
+  }
+  /*nowe @media powyżej 1024, w ktróym main posiada 3 kolumny*/
+  @media only screen and (min-width: 1024px) {
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        padding: 20px 40px;
+    }
+  }
+  /*nowe @media powyżej 1200, w ktróym main posiada 4 kolumny*/
+  @media only screen and (min-width: 1200px) {
+    main{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 1365px;
+        margin:0 auto;
+    }
+    .hero{
+        padding:2rem 10rem;
+    }
+  }
